@@ -4,4 +4,244 @@ body, html {
   scroll-behavior: smooth;
 }
 
+.header {
+  padding: 1rem 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1000;
+}
+.header__logo {
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+}
+
+.footer {
+  background-color: #353535;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  font-size: 19.2px;
+  margin-bottom: 16px;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__listext {
+  margin: 8px 0;
+}
+.footer__listext:first-child {
+  margin-top: 0;
+}
+.footer__listext:last-child {
+  margin-bottom: 0;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__icon {
+  width: 19.2px;
+  margin-right: 8px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  padding: 20px 16px;
+  background-color: #f3f3f3;
+  font-size: 19.2px;
+  position: relative;
+}
+.location__icon {
+  margin-right: 16px;
+}
+.location__text {
+  font-weight: 700;
+}
+
+.introduction {
+  padding: 32px;
+  text-align: center;
+  background-color: #fafafa;
+}
+.introduction__title {
+  margin: 0;
+}
+.introduction__subtitle {
+  font-weight: 300;
+  margin: 24px 0;
+}
+.introduction__button {
+  border: 0;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 17.6px;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.introduction__button:hover {
+  background-color: white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.introduction__button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigation {
+  padding: 32px 16px;
+}
+.navigation__title {
+  margin-top: 0;
+}
+.navigation__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: compteListe;
+}
+@media (min-width: 1024px) {
+  .navigation__steps {
+    display: flex;
+  }
+}
+.navigation__step {
+  padding: 24px;
+  margin: 16px 0 16px 12px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .navigation__step {
+    flex: 1;
+    margin: 0;
+    margin-left: 32px;
+  }
+  .navigation__step:first-child {
+    margin-left: 12px;
+  }
+}
+.navigation__step:first-child {
+  margin-top: 0;
+}
+.navigation__step:last-child {
+  margin-bottom: 0;
+}
+.navigation__step::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  background: #9356DC;
+  height: 24px;
+  width: 24px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: -12px;
+}
+.navigation__icon {
+  margin-right: 16px;
+  color: #7e7e7e;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 32px 16px;
+}
+.Resto {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 32px;
+  row-gap: 32px;
+}
+@media (min-width: 1024px) {
+  .Resto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.resto {
+  background-color: white;
+  border-radius: 16px;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.resto__img {
+  height: 192px;
+  border: transparent solid 0px;
+  border-radius: 16px 16px 0 0;
+  box-shadow: none;
+  object-fit: cover;
+  width: 100%;
+}
+.resto__new {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 8px;
+  border-radius: 2px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.resto__footer {
+  padding: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.resto__content {
+  flex: 1;
+}
+.resto__title {
+  margin: 0;
+  margin-bottom: 4px;
+}
+.resto__subtitle {
+  margin: 0;
+}
+.resto__btn {
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resto__like {
+  background-color: white !important;
+}
+
 /*# sourceMappingURL=style.css.map */
