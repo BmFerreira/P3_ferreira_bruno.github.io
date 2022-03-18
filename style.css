@@ -177,6 +177,7 @@ body, html {
   background-color: #f6f6f6;
   padding: 32px 16px;
 }
+
 .Resto {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
