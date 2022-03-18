@@ -1,0 +1,12 @@
+@use "sass:color";
+
+$first-color: #9356DC;
+$second-color: #FF79DA;
+$third-color: #99E2D0;
+$all-padding: 16px;
+
+body, html {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
