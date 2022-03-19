@@ -246,11 +246,88 @@ body, html {
   background-color: white !important;
 }
 
-.restaurantImg {
+.resto_Img {
   max-width: 100%;
   max-height: 512;
   width: 100%;
   object-fit: cover;
+}
+
+.header--Arrow {
+  position: relative;
+}
+.header__arrow {
+  position: absolute;
+  left: 32px;
+  height: 32px;
+  width: 32px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 19.2px;
+  color: black;
+}
+
+.header_2 {
+  margin-top: -64px;
+  border-radius: 32px 32px 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+}
+.header_2__head {
+  padding: 16px 32px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_2__title {
+  font-family: "Shrikhand", "cursive";
+}
+.header_2__btn {
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+.header_2__btn:hover::before {
+  opacity: 1;
+}
+.header_2__btn::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+.header_2__heart {
+  transition-duration: 0.25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+}
+.header_2__btn:hover .menu__heart--noBg {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
