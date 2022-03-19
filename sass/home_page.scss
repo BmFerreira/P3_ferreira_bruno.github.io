@@ -81,8 +81,8 @@
       }
   
       &::before {
-        counter-increment: compteListe 1;
-        content: counter(compteListe) " ";
+        counter-increment: comptes_liste 1;
+        content: counter(comptes_liste) " ";
         background: $first-color;
         height: 24px;
         width: 24px;
@@ -105,7 +105,7 @@
 .restaurants {
     background-color: #f6f6f6;
     padding: ($all-padding + 16px) $all-padding;
-  
+
 }
 
 .Resto {

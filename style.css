@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 body, html {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -155,8 +156,8 @@ body, html {
   margin-bottom: 0;
 }
 .navigation__step::before {
-  counter-increment: compteListe 1;
-  content: counter(compteListe) " ";
+  counter-increment: comptes_liste 1;
+  content: counter(comptes_liste) " ";
   background: #9356DC;
   height: 24px;
   width: 24px;
@@ -243,6 +244,13 @@ body, html {
 }
 .resto__like {
   background-color: white !important;
+}
+
+.restaurantImg {
+  max-width: 100%;
+  max-height: 512;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
