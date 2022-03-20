@@ -211,4 +211,16 @@
         color: $third-color;
     }
 }
+
+.wrapBtn {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 3rem 0;
+}
+  
+.commandBtn {
+    @include button(primary);
+    cursor: pointer;
+}
   
