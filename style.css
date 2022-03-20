@@ -367,4 +367,73 @@ body, html {
   padding: 0 1rem;
 }
 
+.menuarticle {
+  display: flex;
+  background-color: white;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 12px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemAppear 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  max-width: 100%;
+}
+.menuarticle__header {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+.menuarticle__title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+}
+.menuarticle__description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+}
+.menuarticle__price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-weight: bold;
+  padding-left: 8px;
+}
+.menuarticle__confirmation {
+  background-color: #99E2D0;
+  margin: -16px -80px -16px 16px;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.menuarticle:hover .menuarticle__confirmation {
+  margin-right: -16px;
+}
+.menuarticle__wrapIcon {
+  height: 25.6px;
+  width: 25.6px;
+  border-radius: 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.menuarticle:hover .menuarticle__wrapIcon {
+  transform: rotate(0);
+}
+.menuarticle__icon {
+  color: #99E2D0;
+}
+
 /*# sourceMappingURL=style.css.map */
