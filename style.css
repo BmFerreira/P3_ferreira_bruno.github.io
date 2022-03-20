@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 body, html {
   margin: 0;
@@ -328,6 +329,42 @@ body, html {
 }
 .header_2__btn:hover .menu__heart--noBg {
   opacity: 0;
+}
+
+.menu {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.sub_menu {
+  display: grid;
+}
+@media (min-width: 1024px) {
+  .sub_menu {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+  }
+}
+.sub_menu__title {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 8px;
+  font-weight: normal;
+}
+.sub_menu__title::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.entrées {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
