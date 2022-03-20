@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-            <!--***HEAD OF THE PAGE***-->
+                <!--***HEAD OF THE PAGE***-->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
             <!--CSS-->
-        
-            <!--font-->
-        <script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" href="/style.css">
             <!--icon + title-->
         <link rel="icon" href="#" />
         <title>Accueil - ohmyfood!</title>
     </head>
-                <!--***BODY OF THE PAGE***-->
+                    <!--***BODY OF THE PAGE***-->
     <body>
-        <header class="header">
+            <!--header-->
+        <header class="header header--Arrow">
             <div class="restaurant_container">
-                <a href="/index.html"><i class="fas fa-arrow-left arrow"></i></a>
-                <h1 class="logo">ohmyfood</h1>
+                <a href="/index.html"><i class="fas fa-arrow-left header__arrow"></i></a>
+                <h1 class="header__logo">ohmyfood</h1>
             </div>
-        
-            <img src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" class="restaurant__img">
-
+            <img src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" class="resto_Img">
             <div class="header_2">
-                <h2 class="la_palette_title">Le délice des sens</h2>
-                <button class="la_palette_btn_like">
-                    <i class="resto__like header_2__heart header_2__heart--noBg far fa-heart fa-2x"></i>
-                    <i class="resto__like header_2__heart header_2__heart--Bg fas fa-heart fa-2x"></i>   
-                </button>
+                <section class="header_2__head">
+                    <h2 class="header_2__title">Le délice des sens</h2>
+                    <button class="header_2__btn">
+                        <i class="resto__like header_2__heart--noBg far fa-heart fa-2x"></i>
+                        <i class="resto__like header_2__heart header_2__heart--Bg fas fa-heart fa-2x"></i>   
+                    </button>
+                </section>    
             </div>
         </header>
-
-        <main>
-            <div class="menu">
+            <!--Center (main)-->
+        <main class="menu">
+            <div class="sub_menu">
                 <section class="entrées">
-                    <div>
-                        <h3 class="entrées__title">Entrées</h3>
-                    </div>
-
+                    <h3 class="sub_menu__title">Entrées</h3>
                     <article class="menuarticle">
                         <div class="menuarticle__header">
                             <h4 class="menuarticle__title">Tartare de thon</h4>
@@ -80,9 +75,9 @@
                     </article>
                 </section>
   
-                <section class="submenu">
+                <section>
                     <div>
-                        <h3 class="submenu__title">Plats</h3>
+                        <h3 class="sub_menu__title">Plats</h3>
                     </div>
                     
                     <article class="menuarticle">
@@ -125,9 +120,9 @@
                     </article>
                 </section>
   
-                <section class="submenu">
+                <section>
                     <div>
-                        <h3 class="submenu__title">Desserts</h3> 
+                        <h3 class="sub_menu__title">Desserts</h3> 
                     </div>
                     
                     <article class="menuarticle">
