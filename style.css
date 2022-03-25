@@ -272,25 +272,23 @@ body, html {
   color: black;
 }
 
-.header_2 {
+.menu {
   margin-top: -64px;
   border-radius: 32px 32px 0 0;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
-  max-width: 1280px;
-  /***margin: auto;***/
 }
-.header_2__head {
+.menu__head {
   padding: 16px 32px 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header_2__title {
+.menu__title {
   font-family: "Shrikhand", "cursive";
 }
-.header_2__btn {
+.menu__btn {
   height: 32px;
   width: 32px;
   background-color: transparent;
@@ -303,10 +301,10 @@ body, html {
   position: relative;
   background-color: black;
 }
-.header_2__btn:hover::before {
+.menu__btn:hover::before {
   opacity: 1;
 }
-.header_2__btn::before {
+.menu__btn::before {
   opacity: 0;
   transition: 0.5s;
   content: "";
@@ -317,9 +315,9 @@ body, html {
   width: 100%;
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
-.header_2__heart {
+.menu__heart {
   transition-duration: 0.25s;
-  /**background-color: #f6f6f6;**/
+  background-color: #f6f6f6;
   position: absolute;
   top: 0;
   left: 0;
@@ -330,14 +328,8 @@ body, html {
   justify-content: center;
   mix-blend-mode: lighten;
 }
-.header_2__btn:hover .menu__heart--noBg {
+.menu__btn:hover .menu__heart--noBg {
   opacity: 0;
-}
-
-.menu {
-  max-width: 1280px;
-  margin: auto;
-  background-color: #f6f6f6;
 }
 
 .sub_menu {
