@@ -1,0 +1,75 @@
+.loader  {
+    font-size: 100px;
+    width: 16px;
+    height: 16px;
+    margin: 100px auto;
+    position: relative;
+
+    list-style: none;
+    border-radius: 50%;
+    border: .16px solid rgba(150,150,150,0.1);
+
+    &__logo {
+        font-family: "Shrikhand", "cursive";
+        text-align: center;
+    }
+
+    &__dot {
+        width: .32px;
+        height: .32px;
+        position: absolute;
+       
+    }
+
+    &--1 {
+        background: $first-color;
+        top: 0;
+        left: 50%;
+        margin-left: -.16px;
+        transform-origin: 50% 250%;
+        animation: 
+            rota 1.13s linear infinite,
+            opa 3.67s ease-in-out infinite alternate;
+    }
+
+    &--2 {
+        background: $second-color;
+        top: 50%; 
+        right: 0;
+        margin-top: -.16px;
+        transform-origin: -150% 50%;
+        animation: 
+            rota 1.86s linear infinite,
+            opa 4.29s ease-in-out infinite alternate;
+    }
+
+    &--3 {
+        background: $third-color;
+        bottom: 0;
+        left: 50%; 
+        margin-left: -.16px;
+        transform-origin: 50% -150%;
+        animation: 
+            rota 1.45s linear infinite,
+            opa 5.12s ease-in-out infinite alternate;
+    }
+}
+
+
+@keyframes rota {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes opa {
+    12.0% { opacity: 0.80; }
+    19.5% { opacity: 0.88; }
+    37.2% { opacity: 0.64; }
+    40.5% { opacity: 0.52; }
+    52.7% { opacity: 0.69; }
+    60.2% { opacity: 0.60; }
+    66.6% { opacity: 0.52; }
+    70.0% { opacity: 0.63; }
+    79.9% { opacity: 0.60; }
+    84.2% { opacity: 0.75; }
+    91.0% { opacity: 0.87; }
+}
