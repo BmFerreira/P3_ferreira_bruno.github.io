@@ -32,7 +32,6 @@
     z-index: 1;
     position: relative;
   
-  
     &__head {
         padding: 16px 32px 0 16px;
         display: flex;
@@ -220,5 +219,11 @@
 .commandBtn {
     @include button(primary);
     cursor: pointer;
+}
+
+@for $i from 0 to 9 {
+    .delay-#{$i} {
+      animation-delay:  #{$i/10}s;
+    }
 }
   
