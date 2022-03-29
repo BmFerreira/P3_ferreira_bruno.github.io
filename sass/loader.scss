@@ -1,4 +1,4 @@
-/**.loader  {
+/***.loader  {
     font-size: 100px;
     width: 16px;
     height: 16px;
@@ -8,7 +8,7 @@
     border-radius: 50%;
     border: .16px solid rgba(150,150,150,0.1);
  
-    /**left: 0;
+    left: 0;
     top: 0;
     background-color: hsla(0, 0%, 100%, .9);
     animation: loader .01s;
@@ -17,12 +17,16 @@
     z-index: 10000;
     display: flex;
     justify-content: center;
-    align-items: center;**/
+    align-items: center;
 
 
-    /**&__logo {
+    &__logo {
         font-family: "Shrikhand", "cursive";
         text-align: center;
+        animation:
+            opa 3.67s ease-in-out alternate;
+            opacity: 0;
+            width: 0;
     }
 
     &__dot {
@@ -83,7 +87,7 @@
     79.9% { opacity: 0.60; }
     84.2% { opacity: 0.75; }
     91.0% { opacity: 0.87; }
-}**/
+}***/
 
 /**.loader {
     background-color: #34495e;
@@ -99,7 +103,59 @@
         vertical-align: middle;
         position: relative;
     }
+}
+**/
+
+
+span.myLoader {
+	width: 0; height: 0;
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+    left: 50%; top: 30%;
+
+}
+span.loaderBars:before, 
+span.loaderBars span, 
+span.loaderBars:after {
+	content: '';
+	position: absolute;
+	left: 50%; top: 50%;
+	width: 0; height: 0;
+	-webkit-animation: growLoader 2s linear infinite ;
+	animation: growLoader 2s linear infinite ;
+    opacity: 0;
+    
+}
+span.loaderBars:before {
+	background-color: #000000;
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+span.loaderBars span {
+	background-color: red;
+	left: 30px;
+	-webkit-animation-delay:  -0.33s;
+	animation-delay: -0.33s;
+}
+span.loaderBars:after {
+	background-color: blue;
+	left: 15px;
+	-webkit-animation-delay: -0.66s;
+	animation-delay: -0.66s;
+}
 
 
 
-}**/
+@-webkit-keyframes growLoader {
+	0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0; width: 10px; height: 30px;}
+	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1; width: 10px; height: 30px;}
+	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0; width: 10px; height: 30px;}
+    
+}
+@keyframes growLoader {
+	0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0; width: 10px; height: 30px;}
+	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1; width: 10px; height: 30px;}
+	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0; width: 10px; height: 30px;}
+  
+}
