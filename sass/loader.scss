@@ -1,15 +1,26 @@
-.loader  {
+/**.loader  {
     font-size: 100px;
     width: 16px;
     height: 16px;
     margin: 100px auto;
-    position: relative;
 
     list-style: none;
     border-radius: 50%;
     border: .16px solid rgba(150,150,150,0.1);
+ 
+    /**left: 0;
+    top: 0;
+    background-color: hsla(0, 0%, 100%, .9);
+    animation: loader .01s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;**/
 
-    &__logo {
+
+    /**&__logo {
         font-family: "Shrikhand", "cursive";
         text-align: center;
     }
@@ -21,7 +32,7 @@
        
     }
 
-    &--1 {
+    &__dot--1 {
         background: $first-color;
         top: 0;
         left: 50%;
@@ -32,7 +43,7 @@
             opa 3.67s ease-in-out infinite alternate;
     }
 
-    &--2 {
+    &__dot--2 {
         background: $second-color;
         top: 50%; 
         right: 0;
@@ -43,7 +54,7 @@
             opa 4.29s ease-in-out infinite alternate;
     }
 
-    &--3 {
+    &__dot--3 {
         background: $third-color;
         bottom: 0;
         left: 50%; 
@@ -72,4 +83,23 @@
     79.9% { opacity: 0.60; }
     84.2% { opacity: 0.75; }
     91.0% { opacity: 0.87; }
-}
+}**/
+
+/**.loader {
+    background-color: #34495e;
+    height: 500px;
+    line-height: 500px;
+    display: block;
+
+
+    &__container {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+    }
+
+
+
+}**/
