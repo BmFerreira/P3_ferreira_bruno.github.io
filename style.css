@@ -497,152 +497,52 @@ body, html {
   animation-delay: 0.8s;
 }
 
-/***.loader  {
-    font-size: 100px;
-    width: 16px;
-    height: 16px;
-    margin: 100px auto;
-
-    list-style: none;
-    border-radius: 50%;
-    border: .16px solid rgba(150,150,150,0.1);
-
-    left: 0;
-    top: 0;
-    background-color: hsla(0, 0%, 100%, .9);
-    animation: loader .01s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    z-index: 10000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    &__logo {
-        font-family: "Shrikhand", "cursive";
-        text-align: center;
-        animation:
-            opa 3.67s ease-in-out alternate;
-            opacity: 0;
-            width: 0;
-    }
-
-    &__dot {
-        width: .32px;
-        height: .32px;
-        position: absolute;
-
-    }
-
-    &__dot--1 {
-        background: $first-color;
-        top: 0;
-        left: 50%;
-        margin-left: -.16px;
-        transform-origin: 50% 250%;
-        animation: 
-            rota 1.13s linear infinite,
-            opa 3.67s ease-in-out infinite alternate;
-    }
-
-    &__dot--2 {
-        background: $second-color;
-        top: 50%; 
-        right: 0;
-        margin-top: -.16px;
-        transform-origin: -150% 50%;
-        animation: 
-            rota 1.86s linear infinite,
-            opa 4.29s ease-in-out infinite alternate;
-    }
-
-    &__dot--3 {
-        background: $third-color;
-        bottom: 0;
-        left: 50%; 
-        margin-left: -.16px;
-        transform-origin: 50% -150%;
-        animation: 
-            rota 1.45s linear infinite,
-            opa 5.12s ease-in-out infinite alternate;
-    }
-}
-
-
-@keyframes rota {
-    to { transform: rotate(360deg); }
-}
-
-@keyframes opa {
-    12.0% { opacity: 0.80; }
-    19.5% { opacity: 0.88; }
-    37.2% { opacity: 0.64; }
-    40.5% { opacity: 0.52; }
-    52.7% { opacity: 0.69; }
-    60.2% { opacity: 0.60; }
-    66.6% { opacity: 0.52; }
-    70.0% { opacity: 0.63; }
-    79.9% { opacity: 0.60; }
-    84.2% { opacity: 0.75; }
-    91.0% { opacity: 0.87; }
-}***/
-/**.loader {
-    background-color: #34495e;
-    height: 500px;
-    line-height: 500px;
-    display: block;
-
-
-    &__container {
-        width: 50px;
-        height: 50px;
-        display: inline-block;
-        vertical-align: middle;
-        position: relative;
-    }
-}
-**/
-span.myLoader {
+.Loader {
   width: 0;
   height: 0;
   display: inline-block;
   vertical-align: middle;
   position: absolute;
-  left: 50%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  left: 48%;
   top: 30%;
 }
-
-span.loaderBars:before,
-span.loaderBars span,
-span.loaderBars:after {
+.Loader__Bars:before, .Loader__Bars span, .Loader__Bars:after {
   content: "";
   position: absolute;
   left: 50%;
   top: 50%;
   width: 0;
   height: 0;
-  -webkit-animation: growLoader 2s linear infinite;
-  animation: growLoader 2s linear infinite;
+  -webkit-animation: growLoader 2s linear;
+  animation: growLoader 2s linear;
   opacity: 0;
 }
-
-span.loaderBars:before {
-  background-color: #000000;
+.Loader__Bars:before {
+  background-color: #9356DC;
+  width: 30px;
+  height: 50px;
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
 }
-
-span.loaderBars span {
-  background-color: red;
-  left: 30px;
+.Loader__Bars span {
+  background-color: #FF79DA;
+  width: 30px;
+  height: 50px;
+  left: 70px;
   -webkit-animation-delay: -0.33s;
   animation-delay: -0.33s;
 }
-
-span.loaderBars:after {
-  background-color: blue;
-  left: 15px;
+.Loader__Bars:after {
+  background-color: #99E2D0;
+  width: 30px;
+  height: 50px;
+  left: 35px;
   -webkit-animation-delay: -0.66s;
   animation-delay: -0.66s;
 }
@@ -652,22 +552,16 @@ span.loaderBars:after {
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     opacity: 0;
-    width: 10px;
-    height: 30px;
   }
   50% {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
     opacity: 1;
-    width: 10px;
-    height: 30px;
   }
   100% {
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     opacity: 0;
-    width: 10px;
-    height: 30px;
   }
 }
 @keyframes growLoader {
@@ -675,22 +569,16 @@ span.loaderBars:after {
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     opacity: 0;
-    width: 10px;
-    height: 30px;
   }
   50% {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
     opacity: 1;
-    width: 10px;
-    height: 30px;
   }
   100% {
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     opacity: 0;
-    width: 10px;
-    height: 30px;
   }
 }
 @keyframes itemAppear {
