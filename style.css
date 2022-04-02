@@ -517,8 +517,6 @@ body, html {
   position: absolute;
   left: 49.5%;
   top: 30%;
-  /**width: 0; height: 0;**/
-  /**-webkit-animation: growLoader 2s linear ;**/
   animation: growLoader 2s linear;
   opacity: 0;
 }
@@ -526,7 +524,6 @@ body, html {
   background-color: #FF79DA;
   width: 30px;
   height: 70px;
-  /**-webkit-animation-delay: 0s;**/
   animation-delay: 0s;
 }
 .Loader__Bars span {
@@ -534,7 +531,6 @@ body, html {
   width: 30px;
   height: 70px;
   left: 48%;
-  /**-webkit-animation-delay:  -0.33s;**/
   animation-delay: -0.33s;
   /**@media screen and (min-width:600px) {
   	left: 25%;
@@ -545,19 +541,12 @@ body, html {
   width: 30px;
   height: 70px;
   left: 51%;
-  /**-webkit-animation-delay: -0.66s;**/
   animation-delay: -0.66s;
   /**@media screen and (min-width:600px) {
   	left: 75%;
   }**/
 }
 
-/**@-webkit-keyframes growLoader {
-	0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
-	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1;}
-	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
-
-}**/
 @keyframes growLoader {
   0% {
     -webkit-transform: scaleY(0);
