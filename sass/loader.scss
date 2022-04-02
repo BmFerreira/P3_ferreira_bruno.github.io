@@ -1,62 +1,79 @@
 .Loader {
-	width: 0; height: 0;
-	display: inline-block;
-	vertical-align: middle;
-	position: absolute;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-fill-mode: both;
-    animation-delay: 2s;
-    left: 48%; top: 30%;
+	height: 100%; width: 100%;
+	left: 0%; top: 0%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsla(0,0%,100%,.9);
+	animation: Loader .01s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	z-index: 10000;
     
-    &__Bars:before, 
-    &__Bars span, 
-    &__Bars:after {
+    &__Bars:before,
+	&__Bars:after, 
+    &__Bars span {
 	    content: '';
 	    position: absolute;
-	    left: 50%; top: 50%;
-	    width: 0; height: 0;
-	    -webkit-animation: growLoader 2s linear ;
+	    left: 49.5%; top: 30%;
+	    /**width: 0; height: 0;**/
+	    /**-webkit-animation: growLoader 2s linear ;**/
 	    animation: growLoader 2s linear  ;
         opacity: 0;
     }
 
     &__Bars:before {
-	    background-color: $first-color;
-        width: 30px; height: 50px;
-	    -webkit-animation-delay: 0s;
+	    background-color: $second-color;
+        width: 30px; height: 70px;
+	    /**-webkit-animation-delay: 0s;**/
 	    animation-delay: 0s;
     }
 
-    &__Bars span {
-	    background-color: $second-color;
-        width: 30px; height: 50px;
-	    left: 70px;
-	    -webkit-animation-delay:  -0.33s;
+	&__Bars span {
+	    background-color: $first-color;
+        width: 30px; height: 70px;
+	    left: 48%;
+	    /**-webkit-animation-delay:  -0.33s;**/
 	    animation-delay: -0.33s;
+
+		/**@media screen and (min-width:600px) {
+			left: 25%;
+		}**/
     }
 
-    &__Bars:after {
+	&__Bars:after {
 	    background-color: $third-color;
-        width: 30px; height: 50px;
-	    left: 35px;
-	    -webkit-animation-delay: -0.66s;
+        width: 30px; height: 70px;
+	    left: 51%;
+	    /**-webkit-animation-delay: -0.66s;**/
 	    animation-delay: -0.66s;
+
+		/**@media screen and (min-width:600px) {
+			left: 75%;
+		}**/
     }
+   
+
 }
 
-
-@-webkit-keyframes growLoader {
+/**@-webkit-keyframes growLoader {
 	0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
 	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1;}
 	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
     
-}
+}**/
+
 @keyframes growLoader {
 	0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
 	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1;}
 	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
   
 }
+
+@keyframes Loader {
+	100% {
+	  opacity: 0;
+	  z-index: -10;
+	}
+} 

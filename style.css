@@ -100,7 +100,7 @@ body, html {
   border-radius: 100px;
   color: white;
   background-color: #686868;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -446,7 +446,7 @@ body, html {
   border-radius: 100px;
   color: white;
   background-color: #686868;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -498,72 +498,66 @@ body, html {
 }
 
 .Loader {
-  width: 0;
-  height: 0;
-  display: inline-block;
-  vertical-align: middle;
-  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  top: 0%;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation-fill-mode: both;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: Loader 0.01s;
   animation-delay: 2s;
-  left: 48%;
-  top: 30%;
+  animation-fill-mode: both;
+  z-index: 10000;
 }
-.Loader__Bars:before, .Loader__Bars span, .Loader__Bars:after {
+.Loader__Bars:before, .Loader__Bars:after, .Loader__Bars span {
   content: "";
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 0;
-  height: 0;
-  -webkit-animation: growLoader 2s linear;
+  left: 49.5%;
+  top: 30%;
+  /**width: 0; height: 0;**/
+  /**-webkit-animation: growLoader 2s linear ;**/
   animation: growLoader 2s linear;
   opacity: 0;
 }
 .Loader__Bars:before {
-  background-color: #9356DC;
+  background-color: #FF79DA;
   width: 30px;
-  height: 50px;
-  -webkit-animation-delay: 0s;
+  height: 70px;
+  /**-webkit-animation-delay: 0s;**/
   animation-delay: 0s;
 }
 .Loader__Bars span {
-  background-color: #FF79DA;
+  background-color: #9356DC;
   width: 30px;
-  height: 50px;
-  left: 70px;
-  -webkit-animation-delay: -0.33s;
+  height: 70px;
+  left: 48%;
+  /**-webkit-animation-delay:  -0.33s;**/
   animation-delay: -0.33s;
+  /**@media screen and (min-width:600px) {
+  	left: 25%;
+  }**/
 }
 .Loader__Bars:after {
   background-color: #99E2D0;
   width: 30px;
-  height: 50px;
-  left: 35px;
-  -webkit-animation-delay: -0.66s;
+  height: 70px;
+  left: 51%;
+  /**-webkit-animation-delay: -0.66s;**/
   animation-delay: -0.66s;
+  /**@media screen and (min-width:600px) {
+  	left: 75%;
+  }**/
 }
 
-@-webkit-keyframes growLoader {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    opacity: 0;
-  }
-  50% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    opacity: 0;
-  }
-}
+/**@-webkit-keyframes growLoader {
+	0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
+	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1;}
+	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
+
+}**/
 @keyframes growLoader {
   0% {
     -webkit-transform: scaleY(0);
@@ -579,6 +573,12 @@ body, html {
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     opacity: 0;
+  }
+}
+@keyframes Loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
 @keyframes itemAppear {

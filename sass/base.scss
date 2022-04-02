@@ -3,6 +3,7 @@
 $first-color: #9356DC;
 $second-color: #FF79DA;
 $third-color: #99E2D0;
+$footer-color: #353535;
 $all-padding: 16px;
 
 body, html {
@@ -32,7 +33,7 @@ body, html {
 }
 
 .footer {
-    background-color: #353535;
+    background-color: $footer-color;
       
     .container {
         display: flex;
@@ -89,7 +90,7 @@ body, html {
     border-radius: 100px;
     color: white;
     background-color: rgb(104, 104, 104);
-    background-image: linear-gradient(0deg, color.scale($first-color, $alpha: -10%) 0%, color.scale($second-color, $alpha: -10%) 100%);
+    background-image: linear-gradient(0deg, color.scale($first-color) 0%, color.scale($second-color) 100%);
     cursor: pointer;
     transition-duration: 0.25s;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
