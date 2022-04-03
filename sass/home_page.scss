@@ -27,7 +27,7 @@
     &__subtitle {
         font-weight: 300;
         margin: 24px 0;
-  }
+    }
 
     &__button {
         @include button(primary);
@@ -39,66 +39,66 @@
     padding: ( $all-padding + 16px ) $all-padding;
   
     &__title {
-      margin-top: 0;
+        margin-top: 0;
     }
   
     &__steps {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      counter-reset: compteListe;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: compteListe;
   
-      @media (min-width:1024px) {
-        display: flex;
-      }
+        @media (min-width:1024px) {
+            display: flex;
+        }
     }
   
     &__step {
-      padding: 24px;
-      margin: 16px 0 16px 12px;
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
-      border-radius: 20px;
-      background-color: #f6f6f6;
-      display: flex;
-      position: relative;
+        padding: 24px;
+        margin: 16px 0 16px 12px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+        border-radius: 20px;
+        background-color: #f6f6f6;
+        display: flex;
+        position: relative;
   
-      @media (min-width:1024px) {
-        flex: 1;
-        margin: 0;
-        margin-left: 32px;
+        @media (min-width:1024px) {
+            flex: 1;
+            margin: 0;
+            margin-left: 32px;
+  
+            &:first-child {
+                margin-left: 12px;
+            }
+        }
   
         &:first-child {
-          margin-left: 12px;
+            margin-top: 0;
         }
-      }
   
-      &:first-child {
-        margin-top: 0;
-      }
+        &:last-child {
+            margin-bottom: 0;
+        }
   
-      &:last-child {
-        margin-bottom: 0;
-      }
+        &::before {
+            counter-increment: comptes_liste 1;
+            content: counter(comptes_liste) " ";
+            background: $first-color;
+            height: 24px;
+            width: 24px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            left: -12px;      
+        }
   
-      &::before {
-        counter-increment: comptes_liste 1;
-        content: counter(comptes_liste) " ";
-        background: $first-color;
-        height: 24px;
-        width: 24px;
-        border-radius: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        position: absolute;
-        left: -12px;
-      }
-    }
-  
-    &__icon {
-      margin-right: 16px;
-      color: #7e7e7e;
+        &__icon {
+            margin-right: 16px;
+            color: #7e7e7e;
+        }
     }
 }
 
@@ -115,7 +115,7 @@
     row-gap: 32px;
   
     @media (min-width:1024px) {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -128,56 +128,56 @@
     display: block;
   
     &__img {
-      height: 192px;
-      border: transparent solid 0px;
-      border-radius: 16px 16px 0 0;
-      box-shadow: none;
-      object-fit: cover;
-      width: 100%;
+        height: 192px;
+        border: transparent solid 0px;
+        border-radius: 16px 16px 0 0;
+        box-shadow: none;
+        object-fit: cover;
+        width: 100%;
     }
   
     &__new {
-      background-color: $third-color;
-      color: darken($third-color, 50%);
-      padding: 8px;
-      border-radius: 2px;
-      position: absolute;
-      top: 16px;
-      right: 16px;
+        background-color: $third-color;
+        color: darken($third-color, 50%);
+        padding: 8px;
+        border-radius: 2px;
+        position: absolute;
+        top: 16px;
+        right: 16px;
     }
   
     &__footer {
-      padding: 16px;
-      position: relative;
-      display: flex;
-      align-items: center;
+        padding: 16px;
+        position: relative;
+        display: flex;
+        align-items: center;
     }
   
     &__content {
-      flex: 1;
+        flex: 1;
     }
   
     &__title {
-      margin: 0;
-      margin-bottom: 4px;
+        margin: 0;
+        margin-bottom: 4px;
     }
   
     &__subtitle {
-      margin: 0;
+        margin: 0;
     }
   
     &__btn {
-      height: 32px;
-      width: 32px;
-      background-color: transparent;
-      border: transparent 0px solid;
-      padding: 0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+        height: 32px;
+        width: 32px;
+        background-color: transparent;
+        border: transparent 0px solid;
+        padding: 0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
     }
   
     &__like {
-      background-color: white!important;
+        background-color: white!important;
     }
 }

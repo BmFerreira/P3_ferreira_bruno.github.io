@@ -33,9 +33,9 @@
 	    left: 48%;
 	    animation-delay: -0.33s;
 
-		/**@media screen and (min-width:600px) {
-			left: 25%;
-		}**/
+		@media screen and (max-width:600px) {
+			left: 40%;
+		}
     }
 
 	&__Bars:after {
@@ -44,23 +44,13 @@
 	    left: 51%;
 	    animation-delay: -0.66s;
 
-		/**@media screen and (min-width:600px) {
-			left: 75%;
-		}**/
+		@media screen and (max-width:600px) {
+			left: 59.5%;
+		}
     }
    
 
 }
 
-@keyframes growLoader {
-	0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
-	50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1;}
-	100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;} 
-}
 
-@keyframes Loader {
-	100% {
-	  opacity: 0;
-	  z-index: -10;
-	}
-} 
+
