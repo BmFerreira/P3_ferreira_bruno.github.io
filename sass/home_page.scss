@@ -3,6 +3,7 @@
     justify-content: center;
     padding: 20px $all-padding;
     background-color: rgb(243, 243, 243);
+    box-shadow: 8px 8px 8px -2px rgba(0, 0, 0, 0.125) inset;
     font-size: 19.2px;
     position: relative;
 
@@ -80,8 +81,8 @@
         }
   
         &::before {
-            counter-increment: comptes_liste 1;
-            content: counter(comptes_liste) " ";
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter);
             background: $first-color;
             height: 24px;
             width: 24px;
@@ -94,11 +95,18 @@
             left: -12px;      
         }
   
-        &__icon {
-            margin-right: 16px;
-            color: #7e7e7e;
+        
+    }
+
+    &__icon {
+        margin-right: 20px;
+        color: #7e7e7e;
+     
+        &:hover { 
+            color: $second-color;
         }
     }
+
 }
 
 .Restaurants {

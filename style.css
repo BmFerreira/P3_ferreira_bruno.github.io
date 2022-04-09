@@ -4,6 +4,7 @@ body, html {
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+  counter-reset: my-sec-counter;
 }
 
 .header {
@@ -68,6 +69,7 @@ body, html {
   justify-content: center;
   padding: 20px 16px;
   background-color: #f3f3f3;
+  box-shadow: 8px 8px 8px -2px rgba(0, 0, 0, 0.125) inset;
   font-size: 19.2px;
   position: relative;
 }
@@ -155,8 +157,8 @@ body, html {
   margin-bottom: 0;
 }
 .navigation__step::before {
-  counter-increment: comptes_liste 1;
-  content: counter(comptes_liste) " ";
+  counter-increment: my-sec-counter;
+  content: counter(my-sec-counter);
   background: #9356DC;
   height: 24px;
   width: 24px;
@@ -168,9 +170,12 @@ body, html {
   position: absolute;
   left: -12px;
 }
-.navigation__step__icon {
-  margin-right: 16px;
+.navigation__icon {
+  margin-right: 20px;
   color: #7e7e7e;
+}
+.navigation__icon:hover {
+  color: #FF79DA;
 }
 
 .Restaurants {
@@ -513,8 +518,8 @@ body, html {
 .Loader__Bars:before, .Loader__Bars:after, .Loader__Bars span {
   content: "";
   position: absolute;
-  left: 49.5%;
-  top: 30%;
+  transform: translate(50%, 50%);
+  /**left: 49.5%; top: 30%;**/
   animation: growLoader 2s linear;
   opacity: 0;
 }
@@ -523,30 +528,40 @@ body, html {
   width: 30px;
   height: 70px;
   animation-delay: 0s;
+  top: 50%;
+  left: 50%;
 }
 .Loader__Bars span {
   background-color: #9356DC;
   width: 30px;
   height: 70px;
+  /**left: 47%;**/
+  top: 50%;
   left: 48%;
   animation-delay: -0.33s;
-}
-@media screen and (max-width: 600px) {
-  .Loader__Bars span {
-    left: 40%;
+  /**@media screen and (max-width:600px) {
+  	left: 40%;
   }
+
+  @media screen and (max-width:1920px) {
+  	left: 52%;
+  }**/
 }
 .Loader__Bars:after {
   background-color: #99E2D0;
   width: 30px;
   height: 70px;
-  left: 51%;
+  /**right: 47%;**/
+  top: 50%;
+  left: 52%;
   animation-delay: -0.66s;
-}
-@media screen and (max-width: 600px) {
-  .Loader__Bars:after {
-    left: 59.5%;
+  /**@media screen and (max-width:600px) {
+  	left: 59.5%;
   }
+
+  @media screen and (max-width:1920px) {
+  	left: 47%;
+  }**/
 }
 
 /*** LOADER ***/

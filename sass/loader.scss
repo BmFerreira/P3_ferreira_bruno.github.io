@@ -10,13 +10,16 @@
 	animation-delay: 2s;
 	animation-fill-mode: both;
 	z-index: 10000;
+
+	
     
     &__Bars:before,
 	&__Bars:after, 
     &__Bars span {
 	    content: '';
 	    position: absolute;
-	    left: 49.5%; top: 30%;
+		transform: translate(50%, 50%);
+	    /**left: 49.5%; top: 30%;**/
 	    animation: growLoader 2s linear  ;
         opacity: 0;
     }
@@ -25,29 +28,48 @@
 	    background-color: $second-color;
         width: 30px; height: 70px;
 	    animation-delay: 0s;
+		top: 50%;
+		left: 50%;
+		
     }
 
 	&__Bars span {
 	    background-color: $first-color;
         width: 30px; height: 70px;
-	    left: 48%;
+	    /**left: 47%;**/
+		top: 50%;
+		left: 48%;
 	    animation-delay: -0.33s;
 
-		@media screen and (max-width:600px) {
+
+		/**@media screen and (max-width:600px) {
 			left: 40%;
 		}
+
+		@media screen and (max-width:1920px) {
+			left: 52%;
+		}**/
     }
 
 	&__Bars:after {
 	    background-color: $third-color;
         width: 30px; height: 70px;
-	    left: 51%;
+	    /**right: 47%;**/
+		top: 50%;
+		left: 52%;
 	    animation-delay: -0.66s;
 
-		@media screen and (max-width:600px) {
+
+		/**@media screen and (max-width:600px) {
 			left: 59.5%;
 		}
-    }
+
+		@media screen and (max-width:1920px) {
+			left: 47%;
+		}**/
+	
+	}
+		
 }
 
 
