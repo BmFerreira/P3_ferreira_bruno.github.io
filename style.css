@@ -132,6 +132,7 @@ body, html {
   }
 }
 .navigation__step {
+  cursor: pointer;
   padding: 24px;
   margin: 16px 0 16px 12px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
@@ -139,6 +140,7 @@ body, html {
   background-color: #f6f6f6;
   display: flex;
   position: relative;
+  align-items: center;
 }
 @media (min-width: 1024px) {
   .navigation__step {
@@ -171,10 +173,13 @@ body, html {
   left: -12px;
 }
 .navigation__icon {
+  margin-left: 10px;
   margin-right: 20px;
   color: #7e7e7e;
 }
 .navigation__icon:hover {
+  cursor: pointer;
+  transition: 0.5s;
   color: #FF79DA;
 }
 
