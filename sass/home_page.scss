@@ -43,6 +43,8 @@
     }
   
     &__steps {
+
+
         margin: 0;
         padding: 0;
         list-style: none;
@@ -51,10 +53,11 @@
         @media (min-width:1024px) {
             display: flex;
         }
+
+        
     }
   
     &__step {
-        cursor: pointer;
         padding: 24px;
         margin: 16px 0 16px 12px;
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
@@ -96,22 +99,25 @@
             position: absolute;
             left: -12px;    
         }
-        
-       
+
+        @include fonction(primary);
+
+        &:hover {
+            cursor: pointer;
+            transition: 0.5s;
+            background-color: #ff79d925;
+            .navigation__icon { 
+                transition: 0.5s; 
+                color: $first-color;
+            }
+        }       
     }
 
     &__icon {
         margin-left: 10px;
         margin-right: 20px;
-        color: #7e7e7e;
-     
-        &:hover {
-            cursor: pointer;
-            transition: 0.5s; 
-            color: $second-color;
-        }
-    }
-
+        color: #7e7e7e;     
+    }    
 }
 
 .Restaurants {

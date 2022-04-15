@@ -104,3 +104,19 @@ body, html {
       color: inherit;
     }
 }
+
+@mixin fonction($type) {
+    cursor: pointer;
+  
+    &:hover {
+      background: $second-color, 50%;
+      transition-duration: .25s;
+    }
+
+     
+    
+    /**span {
+      text-decoration: none;
+      color: inherit;
+    }**/
+}

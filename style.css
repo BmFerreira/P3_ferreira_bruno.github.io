@@ -132,7 +132,6 @@ body, html {
   }
 }
 .navigation__step {
-  cursor: pointer;
   padding: 24px;
   margin: 16px 0 16px 12px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
@@ -141,6 +140,11 @@ body, html {
   display: flex;
   position: relative;
   align-items: center;
+  cursor: pointer;
+  /**span {
+    text-decoration: none;
+    color: inherit;
+  }**/
 }
 @media (min-width: 1024px) {
   .navigation__step {
@@ -172,15 +176,23 @@ body, html {
   position: absolute;
   left: -12px;
 }
+.navigation__step:hover {
+  background: #FF79DA, 50%;
+  transition-duration: 0.25s;
+}
+.navigation__step:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #ff79d925;
+}
+.navigation__step:hover .navigation__icon {
+  transition: 0.5s;
+  color: #9356DC;
+}
 .navigation__icon {
   margin-left: 10px;
   margin-right: 20px;
   color: #7e7e7e;
-}
-.navigation__icon:hover {
-  cursor: pointer;
-  transition: 0.5s;
-  color: #FF79DA;
 }
 
 .Restaurants {
