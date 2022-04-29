@@ -1,3 +1,4 @@
+/*** LOCATION HOME PAGE ***/
 .location {
     display: flex;
     justify-content: center;
@@ -15,7 +16,9 @@
         font-weight: 700;
     }
 }
+/*** LOCATION HOME PAGE END ***/
 
+/*** INTRODUCTION HOME PAGE ***/
 .introduction {
     padding: 32px;
     text-align: center;
@@ -34,7 +37,9 @@
         @include button(primary);
     }
 }
+/*** INTRODUCTION HOME PAGE END ***/
 
+/*** NAVIGATION HOME PAGE ***/
 .navigation {
     padding: ( $all-padding + 16px ) $all-padding;
   
@@ -119,7 +124,9 @@
         color: #7e7e7e;     
     }    
 }
+/*** NAVIGATION HOME PAGE END ***/
 
+/*** RESTO HOME PAGE ***/
 .Restaurants {
     background-color: #f6f6f6;
     padding: ($all-padding + 16px) $all-padding;
@@ -199,3 +206,4 @@
         background-color: white!important;
     }
 }
+/*** RESTO HOME PAGE END ***/

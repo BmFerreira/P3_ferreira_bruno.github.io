@@ -6,14 +6,16 @@ $third-color: #99E2D0;
 $footer-color: #353535;
 $all-padding: 16px;
 
+/*** BODY BASE ***/
 body, html {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
     counter-reset: my-sec-counter;
 }
+/*** BODY BASE END***/
 
-
+/*** HEADER/CONTAINER BASE ***/
 .header {
     position: relative;
     z-index: 1000;
@@ -30,7 +32,9 @@ body, html {
     margin: auto;
     position: relative;
 }
+/*** HEADER/CONTAINER BASE END***/
 
+/*** FOOTER BASE ***/
 .footer {
     background-color: $footer-color;
       
@@ -80,6 +84,7 @@ body, html {
         margin-right: 8px;
     }
 }
+/*** FOOTER BASE END ***/
 
 @mixin button($type) {
     border: 0;
@@ -112,11 +117,4 @@ body, html {
       background: $second-color, 50%;
       transition-duration: .25s;
     }
-
-     
-    
-    /**span {
-      text-decoration: none;
-      color: inherit;
-    }**/
 }

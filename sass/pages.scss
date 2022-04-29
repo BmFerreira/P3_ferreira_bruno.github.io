@@ -1,10 +1,13 @@
+/*** RESTO IMAGE PAGES ***/
 .resto_Img {
     max-width: 100%;
     max-height: 512px;
     width: 100%;
     object-fit: cover;
 }
+/*** RESTO IMAGE PAGES END ***/
 
+/*** HEADER PAGES ***/
 .header {
     &--Arrow {
         position: relative;
@@ -24,7 +27,9 @@
         color: black;
     }
 }
-  
+/*** HEADER PAGES END ***/
+
+/*** MENU/SUB-MENU/ENTRES PAGES ***/
 .menu {
     margin-top: -64px;
     border-radius: 32px 32px 0 0;
@@ -36,8 +41,7 @@
         padding: 16px 32px 0 16px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        
+        justify-content: space-between;    
     }
   
     &__title {
@@ -196,7 +200,6 @@
         justify-content:center; 
         transform: rotate(180deg);
         transition-duration: 0.5s;
-  
     }
   
     &:hover &__wrapIcon {
@@ -225,4 +228,5 @@
         animation-delay:  #{$i/10}s;
     }
 }
+/*** MENU/SUB-MENU/ENTRES PAGES END ***/
   

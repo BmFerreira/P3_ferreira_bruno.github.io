@@ -1,5 +1,4 @@
-/*** LOADER ***/
-
+/*** KEYFRAMES ***/
 @keyframes Loader {
 	100% {
 	  	opacity: 0;
@@ -13,10 +12,6 @@
 	100% {transform: scaleY(0); opacity: 0;} 
 }
 
-/*** LOADER END ***/
-
-/*** Animations PAGES ***/
-
 @keyframes itemAppear {
     0% {
       transform: scale(0)
@@ -25,6 +20,4 @@
       transform: scale(1);
     }
 }
-
-/*** Animations PAGES END***/
-
+/*** KEYFRAMES END ***/

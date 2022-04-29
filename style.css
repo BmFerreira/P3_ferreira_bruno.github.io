@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+/*** BODY BASE ***/
 body, html {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -7,6 +8,8 @@ body, html {
   counter-reset: my-sec-counter;
 }
 
+/*** BODY BASE END***/
+/*** HEADER/CONTAINER BASE ***/
 .header {
   position: relative;
   z-index: 1000;
@@ -23,6 +26,8 @@ body, html {
   position: relative;
 }
 
+/*** HEADER/CONTAINER BASE END***/
+/*** FOOTER BASE ***/
 .footer {
   background-color: #353535;
 }
@@ -64,6 +69,8 @@ body, html {
   margin-right: 8px;
 }
 
+/*** FOOTER BASE END ***/
+/*** LOCATION HOME PAGE ***/
 .location {
   display: flex;
   justify-content: center;
@@ -80,6 +87,8 @@ body, html {
   font-weight: 700;
 }
 
+/*** LOCATION HOME PAGE END ***/
+/*** INTRODUCTION HOME PAGE ***/
 .introduction {
   padding: 32px;
   text-align: center;
@@ -114,6 +123,8 @@ body, html {
   color: inherit;
 }
 
+/*** INTRODUCTION HOME PAGE END ***/
+/*** NAVIGATION HOME PAGE ***/
 .navigation {
   padding: 32px 16px;
 }
@@ -141,10 +152,6 @@ body, html {
   position: relative;
   align-items: center;
   cursor: pointer;
-  /**span {
-    text-decoration: none;
-    color: inherit;
-  }**/
 }
 @media (min-width: 1024px) {
   .navigation__step {
@@ -195,6 +202,8 @@ body, html {
   color: #7e7e7e;
 }
 
+/*** NAVIGATION HOME PAGE END ***/
+/*** RESTO HOME PAGE ***/
 .Restaurants {
   background-color: #f6f6f6;
   padding: 32px 16px;
@@ -267,6 +276,8 @@ body, html {
   background-color: white !important;
 }
 
+/*** RESTO HOME PAGE END ***/
+/*** RESTO IMAGE PAGES ***/
 .resto_Img {
   max-width: 100%;
   max-height: 512px;
@@ -274,6 +285,8 @@ body, html {
   object-fit: cover;
 }
 
+/*** RESTO IMAGE PAGES END ***/
+/*** HEADER PAGES ***/
 .header--Arrow {
   position: relative;
 }
@@ -291,6 +304,8 @@ body, html {
   color: black;
 }
 
+/*** HEADER PAGES END ***/
+/*** MENU/SUB-MENU/ENTRES PAGES ***/
 .menu {
   margin-top: -64px;
   border-radius: 32px 32px 0 0;
@@ -517,6 +532,8 @@ body, html {
   animation-delay: 0.8s;
 }
 
+/*** MENU/SUB-MENU/ENTRES PAGES END ***/
+/*** LOADER ***/
 .Loader {
   height: 100%;
   width: 100%;
@@ -581,7 +598,8 @@ body, html {
   }**/
 }
 
-/*** LOADER ***/
+/*** LOADER END ***/
+/*** KEYFRAMES ***/
 @keyframes Loader {
   100% {
     opacity: 0;
@@ -602,8 +620,6 @@ body, html {
     opacity: 0;
   }
 }
-/*** LOADER END ***/
-/*** Animations PAGES ***/
 @keyframes itemAppear {
   0% {
     transform: scale(0);
@@ -612,6 +628,6 @@ body, html {
     transform: scale(1);
   }
 }
-/*** Animations PAGES END***/
+/*** KEYFRAMES END ***/
 
 /*# sourceMappingURL=style.css.map */
