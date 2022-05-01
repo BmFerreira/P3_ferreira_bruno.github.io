@@ -18,7 +18,6 @@
 	    content: '';
 	    position: absolute;
 		transform: translate(50%, 50%);
-	    /**left: 49.5%; top: 30%;**/
 	    animation: growLoader 2s linear  ;
         opacity: 0;
     }
@@ -35,35 +34,17 @@
 	&__Bars span {
 	    background-color: $first-color;
         width: 30px; height: 70px;
-	    /**left: 47%;**/
 		top: 50%;
 		left: 48%;
 	    animation-delay: -0.33s;
-
-		/**@media screen and (max-width:600px) {
-			left: 40%;
-		}
-
-		@media screen and (max-width:1920px) {
-			left: 52%;
-		}**/
     }
 
 	&__Bars:after {
 	    background-color: $third-color;
         width: 30px; height: 70px;
-	    /**right: 47%;**/
 		top: 50%;
 		left: 52%;
 	    animation-delay: -0.66s;
-
-		/**@media screen and (max-width:600px) {
-			left: 59.5%;
-		}
-
-		@media screen and (max-width:1920px) {
-			left: 47%;
-		}**/
 	}		
 }
 /*** LOADER END ***/
